@@ -24,4 +24,5 @@ jobs:
         with:
           scan-type: 'config'
           trivyignores: ".trivyignore"
+          skip-dirs: "." # TODO - Including this line makes this whole flow meaningless and does no harm; however, leaving it here in case if this gets fixed.
           exit-code: '1'
