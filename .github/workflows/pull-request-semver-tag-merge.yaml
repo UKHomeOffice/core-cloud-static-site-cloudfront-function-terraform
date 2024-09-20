@@ -22,13 +22,6 @@ jobs:
       contains(github.event.pull_request.labels.*.name, 'skip-release') == false
     runs-on: ubuntu-latest
     steps:
-      - name: Temp ccheck for env
-        run: |
-          echo "Secrets => $ALLSECRETS"
-        shell: bash
-        env:
-          ALLSECRETS: ${{ toJSON(secrets)}}
-
       - name: Checkout
         uses: actions/checkout@v4
 
