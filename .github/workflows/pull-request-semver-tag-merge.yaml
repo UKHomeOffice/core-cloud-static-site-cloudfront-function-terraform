@@ -5,7 +5,7 @@ on:
       - closed
     branches:
       - main
-t
+
 permissions:
   pull-requests: read
   contents: write
@@ -28,7 +28,7 @@ jobs:
         shell: bash
         env:
           ALLSECRETS: ${{ toJSON(secrets)}}
-          
+
       - name: Checkout
         uses: actions/checkout@v4
 
